@@ -52,3 +52,25 @@ else:
             print(f"You died! Your hp is gone!")
         else:
             print(f"You still alive!")
+
+            print("\n===== Defense Mode =====")
+
+            action = input("Choose your action (1. defend / 2. continue): ")
+
+            if action == "1":
+                damage_monster = random.randint(50, 85)
+                damage_reduced = damage_monster // 2    
+
+                hp = hp - damage_reduced
+
+                print(f"You manage to survive!")
+                print(f"Damage received: {damage_reduced}")
+                print(f"Your HP now: {hp}")
+
+            elif action == "2":
+                print(f"You can skip defense mode") 
+
+            else:
+                print("Invalid action! You can only choose 1 or 2.") 
+
+
